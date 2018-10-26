@@ -8,6 +8,7 @@ import org.apache.zookeeper.CreateMode;
 import com.wallstft.zookeeper.zkEnum.zkAction;
 import com.wallstft.zookeeper.zkUtilities.zkLeader;
 import com.wallstft.zookeeper.zkUtilities.zkListener;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -36,6 +37,7 @@ public class AppTest
 
     myListener my_handler = new myListener();
 
+    @Ignore
     @Test
     public void test_zk_builder()
     {
@@ -80,7 +82,7 @@ public class AppTest
         });
 
         try {
-            Thread.sleep(10 * 60 * 1000);
+            Thread.sleep(1 * 30 * 1000);
         }
         catch ( Exception ex ) {
             log.error(ex);
